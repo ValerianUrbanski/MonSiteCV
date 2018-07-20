@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <meta name="author" content="URBANSKI Valérian">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Import google font roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Import google font lato -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>URBANSKI Valérian</title>
+    <script type="text/javascript">
+        var lesSpan = [];
+        var values = [
+            90,
+            80,
+            60,
+            60,
+            70
+        ];
+        function initialize() {
+            lesSpan = document.getElementsByClassName('pourcent');
+            for (var i = 0; i < lesSpan.length; i++) {
+                var value = parseInt(lesSpan[i].innerHTML.split('%')[0]);
+                values.push(value);
+                lesSpan[i].innerHTML = "0%";
+            }
+            var element = document.getElementsByClassName('competences')[0];
+            if (isScrolledIntoView(element)) {
+                loadCompetences();
+            }
+            window.addEventListener('scroll', function (e) {
+                if (isScrolledIntoView(element)) {
+                    loadCompetences();
+                }
+            });
+            function isScrolledIntoView(el) {
+                var rect = el.getBoundingClientRect();
+                var elemTop = rect.top;
+                var elemBottom = rect.bottom / 2;
+                var isVisible = (elemTop + 100 < window.innerHeight);
+                return isVisible;
+            }
+        }
+        var init = true;
+        function loadCompetences() {
+            if (init) {
+                var progress = document.getElementsByClassName('progress');
+                for (var i = 0; i < progress.length; i++) {
+                    var value = values[i];
+                    var element = progress[i];
+                    var span = lesSpan[i];
+                    this.animate(value, element, span);
+                }
+                init = false;
+            }
+        }
+        function animate(value, element, span) {
+            var position = 0;
+            var id = setInterval(animation, 30);
+            function animation() {
+                if (position === value) {
+                    clearInterval(id);
+                }
+                else {
+                    position++;
+                    span.innerHTML = position + "%";
+                    span.style.right = "-1.5em";
+                    element.style.width = position + "%";
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="initialize()">
+    <noscript>Si vous n'avez pas javaScript vous ne pouvez pas profiter à 100% de ce site</noscript>
+    <div class="entete">
+        <!-- image libre de droit https://www.pexels.com/search/computer/ -->
+        <img id="imgEntete" src="res/top.jpg" />
+    </div>
+    <section class="aboutMe">
+        <div id="content">
+            <div class="top">
+                <h1 id="nom">URBANSKI Valérian</h1>
+                <div class="about">
+                    <p>Je suis un jeune développeur en informatique, j'aime travailler sur diverses technologies mais ma favorite
+                        reste le java.
+                    </p>
+                </div>
+            </div>
+            <div class="rowCompetences">
+                <div class="competences">
+                    <h2>Compétences</h2>
+                    <ul class="comptList">
+                        <li class="java">
+                            <div class="progress progress90">
+                                <span class="pourcent">0%</span>
+                            </div>
+                            <strong>JAVA</strong>
+                        </li>
+                        <li class="sql">
+                            <div class="progress progress80">
+                                <span class="pourcent">0%</span>
+                            </div>
+                            <strong>SQL</strong>
+                        </li>
+                        <li class="html5">
+                            <div class="progress progress60">
+                                <span class="pourcent">0%</span>
+                            </div>
+                            <strong>HTML5</strong>
+                        </li>
+                        <li class="css3">
+                            <div class="progress progress60">
+                                <span class="pourcent">0%</span>
+                            </div>
+                            <strong>CSS3</strong>
+                        </li>
+                        <li class="javascript">
+                            <div class="progress progress70">
+                                <span class="pourcent">0%</span>
+                            </div>
+                            <strong>JAVASCRIPT</strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="monCV">
+                    <a href="res/MonCV.pdf" class="btn buttonCV">MON CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bas">
+        <div class="footer">
+            <div class="contact">
+                <p>contact</p>
+                <ul class="icon">
+                       <li> <a href="mailto:urbanskivalerian@gmail.com"><img  class="gmailImage" src="res/gmail.png"></a></li>
+                        <li><a href="https://www.linkedin.com/in/valerian-urbanski-a1a636168/"><img class="linkedinImage" src="res/linkedin.png"></a></li>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

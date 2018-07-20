@@ -1,0 +1,258 @@
+body {
+    font-family: "lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+section {
+    display: block;
+}
+
+.entete {
+    width: 100%;
+    height: auto;
+}
+
+#imgEntete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+#content .top {
+    padding: 1em;
+}
+
+#content .top #nom {
+    margin: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #444;
+    border: solid;
+    padding: 0.5em;
+    border: 2px solid;
+    border-left: 2px;
+    border-right: 2px;
+}
+
+.aboutMe {
+    margin-top: 30%;
+    padding-bottom: 1em;
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+.aboutMe .about p {
+    padding: 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.8;
+    word-wrap: break-word;
+    word-spacing: 5px;
+}
+
+.about {
+    width: auto;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.rowCompetences {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+}
+
+.competences {
+    width: auto;
+    height: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.competences h2 {
+    text-align: center;
+    font-family: "lato", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.comptList {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    list-style: none;
+    margin: 2em 0 1em;
+}
+
+.comptList li {
+    height: 5px;
+    position: relative;
+    font-family: "lato";
+    font-weight: bold;
+    margin-top: 4em;
+    background: #c9c9c9;
+}
+
+.comptList li span {
+    position: absolute;
+    top: -3em;
+    right: -1.2em;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 5px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    display: block;
+}
+
+.comptList li span::after {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    margin-left: -5px;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #000000;
+    content: "";
+}
+
+.comptList li .progress {
+    background: #000000;
+    background-image: linear-gradient(to right, #001e61, #002e95);
+    position: relative;
+    height: 100%;
+}
+
+.comptList li strong {
+    position: absolute;
+    left: 0;
+    top: -4em;
+    font-family: "lato", sans-serif;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comptList li div {
+    width: 0;
+}
+
+.monCV {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 4em;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+.monCV a {
+    text-align: center;
+    display: block;
+    font-family: "lato", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    line-height: 50px;
+    transition: 1s;
+    text-decoration: none;
+    color: black;
+}
+
+.monCV a:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn {
+    text-align: center;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 0.3em;
+}
+
+.bas {
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.footer .contact p {
+    text-transform: uppercase;
+    font-size: 24px;
+    padding-top: 2em;
+    text-align: center;
+    color: white;
+}
+.footer .contact li{
+    width: 100%;
+    height: auto;
+}
+.contact{
+    text-align: center;
+}
+.contact .icon{
+    width: 100%;
+    height: auto;
+    margin:auto;
+    padding: 0;
+    list-style: none;
+    text-align: middle;
+}
+.contact li{
+    margin: 1em;
+    text-align: center;
+    display: inline;
+}
+
+.footer .contact img {
+    width: 50px;
+    height: auto;
+}
+
+p {
+    font-family: "lato", Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+h1 {
+    font-family: "lato", Arial, Helvetica, sans-serif;
+}
